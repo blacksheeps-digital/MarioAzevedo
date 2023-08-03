@@ -11971,6 +11971,22 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.nav-brand {
+  font-size: 40px;
+  font-size: 2.5rem;
+  line-height: 53px;
+  line-height: 3.3125rem;
+  font-weight: bold;
+}
+
+h1, .h1 {
+  font-size: 50px;
+  font-size: 3.125rem;
+  line-height: 67px;
+  line-height: 4.1875rem;
+  font-weight: bold;
+}
+
 /* CUSTOM STYLES
 -------------------------------------------------- */
 html {
