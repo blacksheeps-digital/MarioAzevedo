@@ -11987,6 +11987,61 @@ h1, .h1 {
   font-weight: bold;
 }
 
+@media (min-width: 992px) {
+  .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+    padding: 0;
+  }
+}
+nav.navbar:not(#home) {
+  max-height: 100vh;
+}
+nav.navbar:not(#home) .collapse {
+  height: 95vh;
+}
+nav.navbar .col-md-12 {
+  border-bottom: 1px solid #bcbcbc;
+}
+nav.navbar .desktop-icon-link {
+  padding: 15px;
+  height: 100%;
+  border-right: 1px solid #bcbcbc;
+}
+nav.navbar .nav-item img {
+  margin-top: 100px;
+}
+nav.navbar .nav-title {
+  color: #909090;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 30px;
+  line-height: 1.875rem;
+}
+nav.navbar .nav-link {
+  font-size: 50px;
+  font-size: 3.125rem;
+  line-height: 60px;
+  line-height: 3.75rem;
+  color: #000;
+}
+nav.navbar .navbar-toggler {
+  border: none;
+  border-left: 1px solid #bcbcbc;
+  border-radius: 0;
+  padding: 10px;
+}
+nav.navbar .navbar-toggler .navbar-toggler-icon-custom {
+  display: block;
+  height: 30px;
+  width: 70px;
+  background-image: url("/assets/images/hamburger.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center center;
+}
+nav.navbar .navbar-toggler .navbar-toggler-icon-custom:is(#home) {
+  background-image: url("/assets/images/close.svg") !important;
+}
+
 /* CUSTOM STYLES
 -------------------------------------------------- */
 html {

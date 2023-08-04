@@ -1,0 +1,56 @@
+@include media-breakpoint-up(lg){
+    .container-fluid{
+        padding: 0;
+    }
+}
+
+nav.navbar {
+    &:not(#home) {
+        max-height: 100vh;
+        .collapse {
+            height: 95vh;
+        }
+    }
+
+    .col-md-12 {
+        border-bottom: 1px solid #bcbcbc;
+    }
+
+    .desktop-icon-link {
+        padding: 15px;
+        height: 100%;
+        border-right: 1px solid #bcbcbc;
+    }
+
+    .nav-item img {
+        margin-top: 100px;
+    }
+
+    .nav-title {
+        color: #909090;
+        @include rhythm(24, 30);
+    }
+    .nav-link {
+        @include rhythm(50, 60);
+        color: #000;
+    }
+
+    .navbar-toggler {
+        border: none;
+        border-left: 1px solid #bcbcbc;
+        border-radius: 0;
+        padding: 10px;
+        .navbar-toggler-icon-custom {
+            display: block;
+            height: 30px;
+            width: 70px;
+            background-image: url("/assets/images/hamburger.svg");
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: center center;
+            &:is(#home) {
+                background-image: url("/assets/images/close.svg") !important;
+            }
+        }
+    }
+}
