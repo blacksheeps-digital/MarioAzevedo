@@ -5,12 +5,6 @@
 }
 
 nav.navbar {
-    &:not(#home) {
-        max-height: 100vh;
-        .collapse {
-            height: 95vh;
-        }
-    }
 
     .col-md-12 {
         border-bottom: 1px solid #bcbcbc;

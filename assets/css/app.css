@@ -11992,12 +11992,6 @@ h1, .h1 {
     padding: 0;
   }
 }
-nav.navbar:not(#home) {
-  max-height: 100vh;
-}
-nav.navbar:not(#home) .collapse {
-  height: 95vh;
-}
 nav.navbar .col-md-12 {
   border-bottom: 1px solid #bcbcbc;
 }
@@ -12040,6 +12034,49 @@ nav.navbar .navbar-toggler .navbar-toggler-icon-custom {
 }
 nav.navbar .navbar-toggler .navbar-toggler-icon-custom:is(#home) {
   background-image: url("/assets/images/close.svg") !important;
+}
+
+.year-nav .nav-link {
+  color: #000;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 27px;
+  line-height: 1.6875rem;
+}
+.year-nav .active {
+  font-size: 27px;
+  font-size: 1.6875rem;
+  line-height: 32px;
+  line-height: 2rem;
+  font-weight: bold;
+}
+
+#myTab {
+  border: none;
+}
+#myTab .nav-link {
+  padding: 5px 20px;
+  border: 1px solid #bcbcbc;
+  border-radius: 0;
+  color: black;
+}
+#myTab .nav-link.active {
+  position: relative;
+  background-color: black;
+  color: white;
+}
+#myTab .nav-link.active::before {
+  content: "";
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid black;
+  top: -10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 10px;
+  height: 10px;
 }
 
 /* CUSTOM STYLES

@@ -1,0 +1,29 @@
+#myTab {
+    border: none;
+    .nav-link {
+        padding: 5px 20px;
+        border: 1px solid #bcbcbc;
+        border-radius: 0;
+        color: black;
+
+        &.active {
+            position: relative;
+            background-color: black;
+            color: white;
+
+            &::before {
+                content: "";
+                position: absolute;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 10px solid black;
+                top: -10px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }
+}

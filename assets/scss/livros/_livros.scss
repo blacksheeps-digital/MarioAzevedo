@@ -1,0 +1,10 @@
+.year-nav {
+    .nav-link {
+        color: #000;
+        @include rhythm(20,27);
+    }
+    .active {
+        @include rhythm(27,32);
+        font-weight: bold;
+    }
+}
