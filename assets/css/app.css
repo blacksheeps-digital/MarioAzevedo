@@ -12213,6 +12213,11 @@ nav.navbar .navbar-toggler .navbar-toggler-icon-custom:is(#home) {
   display: block;
   padding-top: 0.5rem;
 }
+@media (max-width: 991.98px) {
+  .section-with-sidebar hr {
+    width: 100% !important;
+  }
+}
 
 .no-sidebar img {
   width: 100%;
@@ -12220,7 +12225,17 @@ nav.navbar .navbar-toggler .navbar-toggler-icon-custom:is(#home) {
   -o-object-fit: contain;
      object-fit: contain;
 }
+@media (max-width: 991.98px) {
+  .no-sidebar hr {
+    width: 100% !important;
+  }
+}
 
+.recommended .col-md-12.h-100.p-0 {
+  flex-wrap: wrap;
+  padding: 15px !important;
+  margin-bottom: 30px;
+}
 .recommended a {
   color: inherit;
   text-decoration: inherit;
@@ -12228,6 +12243,17 @@ nav.navbar .navbar-toggler .navbar-toggler-icon-custom:is(#home) {
 }
 .recommended a:hover {
   transform: scale(1.05);
+}
+@media (max-width: 991.98px) {
+  .recommended a {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
+@media (max-width: 991.98px) {
+  .recommended hr {
+    width: 100% !important;
+  }
 }
 
 .curriculo .top-sec {

@@ -23,6 +23,12 @@
             }
         }
     }
+
+    @include media-breakpoint-down(lg) {
+        hr {
+            width: 100% !important;
+        }
+    }
 }
 .no-sidebar {
     img {
@@ -30,9 +36,19 @@
         height: 100%;
         object-fit: contain;
     }
+    @include media-breakpoint-down(lg) {
+        hr {
+            width: 100% !important;
+        }
+    }
 }
 
 .recommended {
+    .col-md-12.h-100.p-0{
+        flex-wrap: wrap;
+        padding: 15px !important;
+        margin-bottom: 30px;
+    }
     a {
         color: inherit;
         text-decoration: inherit;
@@ -40,5 +56,16 @@
         &:hover {
             transform: scale(1.05);
         }
+
+        @include media-breakpoint-down(lg){
+            justify-content: center !important;
+            align-items: center !important;
+        }
     }
+    @include media-breakpoint-down(lg) {
+        hr {
+            width: 100% !important;
+        }
+    }
+
 }
