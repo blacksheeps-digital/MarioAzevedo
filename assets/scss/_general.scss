@@ -8,6 +8,9 @@
 h1 {
     @include rhythm(50, 67);
     font-weight: bold;
+    @include media-breakpoint-down(lg){
+        @include rhythm(30,33);
+    }
 }
 
 .img-text {

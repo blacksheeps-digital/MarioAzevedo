@@ -11986,6 +11986,14 @@ h1, .h1 {
   line-height: 4.1875rem;
   font-weight: bold;
 }
+@media (max-width: 991.98px) {
+  h1, .h1 {
+    font-size: 30px;
+    font-size: 1.875rem;
+    line-height: 33px;
+    line-height: 2.0625rem;
+  }
+}
 
 .img-text {
   color: #878787;
@@ -12115,6 +12123,14 @@ nav.navbar .navbar-toggler .navbar-toggler-icon-custom:is(#home) {
   }
 }
 
+@media (max-width: 991.98px) {
+  .year-nav {
+    flex-wrap: nowrap;
+    overflow: scroll;
+    justify-content: start !important;
+    padding: 20px;
+  }
+}
 .year-nav .nav-link {
   color: #000;
   font-size: 20px;
@@ -12132,6 +12148,7 @@ nav.navbar .navbar-toggler .navbar-toggler-icon-custom:is(#home) {
 
 #myTab {
   border: none;
+  margin-bottom: 40px;
 }
 #myTab .nav-link {
   padding: 5px 20px;
@@ -12156,6 +12173,19 @@ nav.navbar .navbar-toggler .navbar-toggler-icon-custom:is(#home) {
   margin: auto;
   width: 10px;
   height: 10px;
+}
+@media (max-width: 991.98px) {
+  #myTab {
+    flex-wrap: nowrap;
+    overflow: scroll;
+    justify-content: start !important;
+    margin-bottom: 20px;
+    padding: 20px 20px;
+  }
+}
+
+#myTabContent a {
+  text-align: center;
 }
 
 .section-with-sidebar img {
