@@ -1,17 +1,22 @@
-@include media-breakpoint-up(lg){
-    .container-fluid{
+@include media-breakpoint-up(lg) {
+    .container-fluid {
         padding: 0;
     }
 }
 
 nav.navbar {
+    .navbar-nav {
+        @include media-breakpoint-up(md) {
+            padding-bottom: 2rem;
+        }
+    }
 
     .col-md-12 {
         border-bottom: 1px solid #bcbcbc;
     }
 
     .desktop-icon-link {
-        padding: 15px;
+        padding: 20px;
         height: 100%;
         border-right: 1px solid #bcbcbc;
     }
@@ -45,6 +50,42 @@ nav.navbar {
             &:is(#home) {
                 background-image: url("/assets/images/close.svg") !important;
             }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .desktop-icon-link:hover {
+            padding-top: 5px;
+            background-color: black;
+            padding-bottom: 5px;
+            img {
+                filter: invert(100%);
+            }
+            span {
+                color: white;
+                display: block !important;
+                margin: auto;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        .container-fluid {
+            padding: 0;
+        }
+
+        .navbar-brand {
+            padding-left: 15px;
+        }
+
+        .nav-link {
+            text-align: center;
+            @include rhythm(30, 35);
+        }
+
+        .col-md-12 {
+            justify-content: space-between;
+            width: 100%;
         }
     }
 }

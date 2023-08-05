@@ -12032,11 +12032,16 @@ footer {
     padding: 0;
   }
 }
+@media (min-width: 768px) {
+  nav.navbar .navbar-nav {
+    padding-bottom: 2rem;
+  }
+}
 nav.navbar .col-md-12 {
   border-bottom: 1px solid #bcbcbc;
 }
 nav.navbar .desktop-icon-link {
-  padding: 15px;
+  padding: 20px;
   height: 100%;
   border-right: 1px solid #bcbcbc;
 }
@@ -12074,6 +12079,40 @@ nav.navbar .navbar-toggler .navbar-toggler-icon-custom {
 }
 nav.navbar .navbar-toggler .navbar-toggler-icon-custom:is(#home) {
   background-image: url("/assets/images/close.svg") !important;
+}
+@media (min-width: 768px) {
+  nav.navbar .desktop-icon-link:hover {
+    padding-top: 5px;
+    background-color: black;
+    padding-bottom: 5px;
+  }
+  nav.navbar .desktop-icon-link:hover img {
+    filter: invert(100%);
+  }
+  nav.navbar .desktop-icon-link:hover span {
+    color: white;
+    display: block !important;
+    margin: auto;
+  }
+}
+@media (max-width: 991.98px) {
+  nav.navbar .container-fluid, nav.navbar .container-sm, nav.navbar .container-md, nav.navbar .container-lg, nav.navbar .container-xl, nav.navbar .container-xxl {
+    padding: 0;
+  }
+  nav.navbar .navbar-brand {
+    padding-left: 15px;
+  }
+  nav.navbar .nav-link {
+    text-align: center;
+    font-size: 30px;
+    font-size: 1.875rem;
+    line-height: 35px;
+    line-height: 2.1875rem;
+  }
+  nav.navbar .col-md-12 {
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 .year-nav .nav-link {
