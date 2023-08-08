@@ -8,7 +8,7 @@ get_header();
 <!-- Conteúdo da página Acervo -->
 
 
-<section class="">
+<section class="acervo">
     <div class="container h-100">
         <div class="row align-items-center justify-content-center h-100 ">
             <div class="col-md-12">

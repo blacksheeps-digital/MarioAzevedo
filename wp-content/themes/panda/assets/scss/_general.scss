@@ -1,2 +1,10 @@
 // General Style
- 
+ .wpcf7{
+    label{
+        width: 100%;
+        font-family: 'OfficinaSerifCTT';
+        @include rhythm(20,24);
+        text-align: left !important;
+    }
+
+ }
