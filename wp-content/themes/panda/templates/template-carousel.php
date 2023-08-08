@@ -5,6 +5,7 @@ Template Name: Carousel
 get_header();
 ?>
 
+<h2>fancybox v3.4 + Slick carousel</h2>
 
 <section class="carousel">
     <div class="container h-100">
