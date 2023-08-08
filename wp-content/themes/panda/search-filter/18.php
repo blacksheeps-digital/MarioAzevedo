@@ -47,22 +47,25 @@ if ( $query->have_posts() )
 			}
 		?>
 	</div>
-	
+	<div class="row">
+
+
 	<?php
 	while ($query->have_posts())
 	{
 		$query->the_post();
 		
 		?>
-		<div class="col-md-4">
-			<!-- <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2> -->
+		<div class="col-md-6">
+			<!-- <h2><?php the_title(); ?></a></h2> -->
 			
 			<!-- <p><br /><?php the_excerpt(); ?></p> -->
 			<?php 
-				if ( has_post_thumbnail() ) {
-					echo '<p>';
-					the_post_thumbnail("small");
-					echo '</p>';
+				if ( has_post_thumbnail() ) { ?> 
+					<a href="<?php the_permalink(); ?>">
+                    <?php the_post_thumbnail('large', array('class' => 'img-fluid')); ?>
+                </a>
+<?php	
 				}
 			?>
 			<!-- <p><?php the_category(); ?></p> -->
@@ -90,6 +93,7 @@ if ( $query->have_posts() )
 			}
 		?>
 	</div>
+    </div>
 	<?php
 }
 else
