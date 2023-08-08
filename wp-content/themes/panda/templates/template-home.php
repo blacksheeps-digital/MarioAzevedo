@@ -16,22 +16,22 @@ get_header();
                 <p>Menu</p>
                 <ul class="list-inline">
                     <li>
-                        <a href="#">ACERVO DE IMAGENS</a>
+                        <a href="/acervo">ACERVO DE IMAGENS</a>
                     </li>
                     <li>
-                        <a href="#">CADERNOS E LIVROS-DE-ARTISTAS</a>
+                        <a href="/cadernos-e-livros-de-artistas">CADERNOS E LIVROS-DE-ARTISTAS</a>
                     </li>
                     <li>
-                        <a href="#">Currículo</a>
+                        <a href="/curriculo">Currículo</a>
                     </li>
                     <li>
-                        <a href="#">Fortuna crítica</a>
+                        <a href="/fortuna-critica">Fortuna crítica</a>
                     </li>
                     <li>
-                        <a href="#">OUTROS TEXTOS</a>
+                        <a href="/outros-textos">OUTROS TEXTOS</a>
                     </li>
                     <li>
-                        <a href="#">BLOG</a>
+                        <a href="/blog">BLOG</a>
                     </li>
                 </ul>
             </div>

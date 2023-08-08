@@ -107,8 +107,7 @@
         <div class="modal fade m-0" id="exampleModalXl" tabindex="-1" aria-labelledby="exampleModalXlLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title h4" id="exampleModalXlLabel">Extra large modal</h5>
+                    <div class="modal-header justify-content-end" style="position:absolute; right: 20px; z-index: 9999;">
                         <a data-bs-dismiss="modal" aria-label="Close" style="cursor: pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" width="33.235" height="33.234" viewBox="0 0 33.235 33.234">
                                 <rect id="Retângulo_379" data-name="Retângulo 379" width="45" height="2" rx="1" transform="translate(1.415) rotate(45)" />
@@ -118,7 +117,38 @@
                         </a>
                     </div>
                     <div class="modal-body">
-                        ...
+                        <section class="menu">
+                            <div class="container h-100">
+                                <div class="row align-items-center justify-content-center h-100 ">
+                                    <div class="col-md-12 text-center">
+                                        <img src='<?php echo get_template_directory_uri(); ?>/assets/images/menu.png' class='img-fluid' alt='' title='' loading='lazy'>
+                                    </div>
+                                    <div class="col-md-12 text-center">
+                                        <p>Menu</p>
+                                        <ul class="list-inline">
+                                            <li>
+                                                <a href="/acervo">ACERVO DE IMAGENS</a>
+                                            </li>
+                                            <li>
+                                                <a href="/cadernos-e-livros-de-artistas">CADERNOS E LIVROS-DE-ARTISTAS</a>
+                                            </li>
+                                            <li>
+                                                <a href="/curriculo">Currículo</a>
+                                            </li>
+                                            <li>
+                                                <a href="/fortuna-critica">Fortuna crítica</a>
+                                            </li>
+                                            <li>
+                                                <a href="/outros-textos">OUTROS TEXTOS</a>
+                                            </li>
+                                            <li>
+                                                <a href="/blog">BLOG</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </div>
