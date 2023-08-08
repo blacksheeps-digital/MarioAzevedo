@@ -12,7 +12,7 @@ get_header( );
             <div class="col-md-12 text-center">
                 <h1>Contato</h1>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-8 col-lg-6">
                 <?php echo do_shortcode('[contact-form-7 id="b011345" title="Formulário de contato 1"]');?>
             </div>
         </div>

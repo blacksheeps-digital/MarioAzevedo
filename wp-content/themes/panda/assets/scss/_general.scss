@@ -1,4 +1,17 @@
 // General Style
+// // Search & Filter
+.agregador .searchandfilter {
+    & > ul > li:not(:first-child) {
+        display: none;
+    }
+    
+}
+
+section:not(.agregador) .searchandfilter {
+    & > ul > li:first-child {
+        display: none;
+    }
+}
 // // Contact Form
 .wpcf7 {
     label {
@@ -20,11 +33,20 @@
         background-color: black;
         color: white;
         border-radius: 0;
-        @include rhythm(24,30);
+        @include rhythm(24, 30);
         padding: 15px 45px;
-        &:hover{
+        &:hover {
             background-color: white;
             color: black;
+        }
+    }
+    .col-md-12.text-end {
+        position: relative;
+        .wpcf7-spinner {
+            position: absolute;
+            @include media-breakpoint-down(lg) {
+                left: 10%;
+            }
         }
     }
 }

@@ -31,8 +31,8 @@ if ( $query->have_posts() )
 {
 	?>
 	
-	Found <?php echo $query->found_posts; ?> Results<br />
-	Page <?php echo $query->query['paged']; ?> of <?php echo $query->max_num_pages; ?><br />
+	<!-- Found <?php echo $query->found_posts; ?> Results<br /> -->
+	<!-- Page <?php echo $query->query['paged']; ?> of <?php echo $query->max_num_pages; ?><br /> -->
 	
 	<div class="pagination">
 		
@@ -75,7 +75,7 @@ if ( $query->have_posts() )
 		<?php
 	}
 	?>
-	Page <?php echo $query->query['paged']; ?> of <?php echo $query->max_num_pages; ?><br />
+	<!-- Page <?php echo $query->query['paged']; ?> of <?php echo $query->max_num_pages; ?><br /> -->
 	
 	<div class="pagination">
 		
