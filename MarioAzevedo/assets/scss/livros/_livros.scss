@@ -1,0 +1,17 @@
+.year-nav {
+    @include media-breakpoint-down(lg) {
+        flex-wrap: nowrap;
+        overflow: scroll;
+        justify-content: start !important;
+        padding: 20px;
+
+    }
+    .nav-link {
+        color: #000;
+        @include rhythm(20, 27);
+    }
+    .active {
+        @include rhythm(27, 32);
+        font-weight: bold;
+    }
+}

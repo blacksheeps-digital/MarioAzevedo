@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'OfficinaSerif';
+    src: url('OfficinaSerifBold.woff2') format('woff2'),
+        url('OfficinaSerifBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OfficinaSerifCTT';
+    src: url('OfficinaSerifCTT.woff2') format('woff2'),
+        url('OfficinaSerifCTT.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OfficinaSerif';
+    src: url('OfficinaSerif.woff2') format('woff2'),
+        url('OfficinaSerif.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OfficinaSerifCTT';
+    src: url('OfficinaSerifCTT-Bold.woff2') format('woff2'),
+        url('OfficinaSerifCTT-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Officina Serif ITC TT';
+    src: url('OfficinaSerifITCTTBold.woff2') format('woff2'),
+        url('OfficinaSerifITCTTBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OfficinaSerifCTT';
+    src: url('OfficinaSerifCTT-BoldItalic.woff2') format('woff2'),
+        url('OfficinaSerifCTT-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Officina Serif ITC TT Book';
+    src: url('OfficinaSerifITCTTBook.woff2') format('woff2'),
+        url('OfficinaSerifITCTTBook.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

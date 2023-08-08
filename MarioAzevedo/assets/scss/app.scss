@@ -1,0 +1,35 @@
+// Custom bootstrap variable overrides
+@import "bootstrap_variable_overrides";
+
+// Bootstrap and its default variables
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Your style
+@import "variables";
+@import "mixins";
+@import "general";
+@import "layout";
+@import "module";
+
+// // Header
+@import "header";
+
+// // Pages
+@import "./livros/livros";
+@import "./livros-interna/livros-interna";
+@import "./single/single";
+@import "./curriculo/curriculo";
+
+/* CUSTOM STYLES
+-------------------------------------------------- */
+//Smooth Scroll
+html {
+  scroll-behavior: smooth;
+}
+
+.single-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+

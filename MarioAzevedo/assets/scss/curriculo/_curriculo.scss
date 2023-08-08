@@ -1,0 +1,30 @@
+.curriculo {
+    .top-sec {
+        position: relative;
+        .img-large {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .img-text{
+        margin-top: .25rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        .img-text {
+            position: absolute;
+            transform: rotate(-90deg);
+            bottom: 130px;
+            right: -65px;
+        }
+    }
+    .download {
+        a {
+            border-radius: 0 !important;
+            border-left: none;
+            border-right: none;
+        }
+    }
+}

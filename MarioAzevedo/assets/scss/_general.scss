@@ -1,0 +1,54 @@
+// General Style
+
+// // Typography
+.nav-brand {
+    @include rhythm(40, 53);
+    font-weight: bold;
+}
+h1 {
+    @include rhythm(50, 67);
+    font-weight: bold;
+    @include media-breakpoint-down(lg){
+        @include rhythm(30,33);
+    }
+}
+
+.img-text {
+    color: #878787;
+}
+
+// // Button
+.btn-black {
+    padding: 12px 40px;
+    color: white;
+    background-color: black;
+    @include rhythm(24, 28);
+    border-radius: 0;
+    border: 1px solid black;
+
+    &:hover {
+        border: 1px solid black;
+    }
+}
+
+footer{
+    position: relative;
+}
+
+#scrollToTopBtn {
+    display: none;
+    position: absolute;
+    top: -25px;
+    right: 20%;
+    z-index: 99;
+    color: white;
+    cursor: pointer;
+    padding: 10px 10px;
+    outline: 0;
+    background-color: white;
+    border: 1px solid black;
+
+    &:hover{
+        background-color: #bcbcbc;
+    }
+}

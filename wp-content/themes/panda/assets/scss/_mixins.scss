@@ -1,0 +1,135 @@
+// Mixins
+@mixin generate-font-weight-classes {
+    $start-weight: 100;
+    $end-weight: 900;
+    $step: 100;
+  
+    @for $i from $start-weight through $end-weight {
+        $weight-name: $i;
+        $weight-value: $i;
+        .fw-#{$weight-name} {
+            font-weight: $weight-value;
+        }
+    }
+}
+  
+@include generate-font-weight-classes;
+  
+  
+  
+@mixin common-heading-styles {
+    @for $i from 1 through 6 {
+        h#{$i} {
+            margin-bottom: 0;
+            color: #000;
+            opacity: 1;
+        }
+    }
+}
+p, ul{
+    margin-bottom: 0;
+}
+// Exemplo de uso
+@include common-heading-styles;
+
+ 
+  
+
+//Adds font-size in rem & px
+//Value passed should be the expected px size
+//Default value 12 - can be customized to fit project
+@mixin font-size($sizeValue: 12 ){
+	font-size: $sizeValue + px; //fallback for old browsers
+	font-size: (0.0625 * $sizeValue) + rem;
+
+}
+
+//Adds line-height in rem & px
+//Value passed should be the expected px size
+ @mixin line-height($heightValue: 20 ){
+	line-height: $heightValue + px; //fallback for old browsers
+	line-height: (0.0625 * $heightValue) + rem;
+}
+
+//Rhythm adds font-size and line-height in rem with a px fallback
+//Value passed should be the expected px size
+ @mixin rhythm($sizeValue: 12, $heightValue: 20) {
+	@include font-size($sizeValue);
+	@include line-height($heightValue);
+}
+
+$colors: (
+    light-blue:#9BC9EF,
+    blue:#008AFF,
+    blue-darker:#0075D9,
+    deep-blue: #1E4FC2,
+    blue-extra: #0D0A66,
+    blue-light-extra: #182A9E,
+    yellow:#FCD629,
+    yellow-darker: #FFEE00,
+    accent:#EE0011,
+    white:#FFFFFF,
+    black:#000000,
+    gray-4:#4A5056,
+    gray-3:#8B9196,
+    gray-2:#ABB3BA,
+    gray-1:#F8F9FA,
+    gray: #E5E9EC,
+    green: #6FCF97,
+    red:#F86C6C,
+    orange: #FDB731,
+    green-accent: #17C43D,
+    violet:#AB7EE5,
+    bluish: #EDF5FC,
+);
+
+@mixin generate-color-classes {
+    @each $color-name, $color-value in $colors {
+        .color-#{"" + $color-name} {
+            color: $color-value;
+        }
+    }
+}
+
+@mixin generate-background-classes {
+    @each $color-name, $color-value in $colors {
+        .background-#{"" + $color-name} {
+            background-color: $color-value;
+        }
+    }
+}
+
+@include generate-color-classes;
+@include generate-background-classes;
+
+%common-styless {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.01em;
+    color: #ABB3BA;
+  }
+  
+  @mixin input-placeholder {
+    &::placeholder {
+      @extend %common-styless;
+    }
+  
+    /* Estilos específicos para navegadores WebKit, como Chrome e Safari */
+    &::-webkit-input-placeholder {
+      @extend %common-styless;
+    }
+  
+    /* Estilos específicos para navegadores Mozilla Firefox */
+    &::-moz-placeholder {
+      @extend %common-styless;
+    }
+  
+    /* Estilos específicos para navegadores Microsoft Edge */
+    &:-ms-input-placeholder {
+      @extend %common-styless;
+    }
+  }
+  
