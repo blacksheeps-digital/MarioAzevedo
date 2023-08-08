@@ -54,13 +54,13 @@ if ( $query->have_posts() )
 		$query->the_post();
 		
 		?>
-		<div class="col-md-4">
+		<div class="col-md-4 text-center">
 			<!-- <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2> -->
 			
 			<!-- <p><br /><?php the_excerpt(); ?></p> -->
 			<?php 
 				if ( has_post_thumbnail() ) {
-					echo '<p>';
+					echo '<p class= text-center>';
 					the_post_thumbnail("small");
 					echo '</p>';
 				}

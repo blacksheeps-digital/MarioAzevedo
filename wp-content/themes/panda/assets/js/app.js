@@ -20,48 +20,48 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// // ============================
-// // Init 1st slider and fancybox
-// // ============================
+// ============================
+// Init 1st slider and fancybox
+// ============================
 
-// // fancybox
-// $('[data-fancybox]').fancybox({
-//   // Options will go here
-//   buttons: [
-//     'close'
-//   ],
-//   wheel: false,
-//   transitionEffect: "slide",
-//   // thumbs          : false,
-//   // hash            : false,
-//   loop: true,
-//   // keyboard        : true,
-//   toolbar: false,
-//   // animationEffect : false,
-//   // arrows          : true,
-//   clickContent: false
-// });
+// fancybox
+$('[data-fancybox]').fancybox({
+  // Options will go here
+  buttons: [
+    'close'
+  ],
+  wheel: false,
+  transitionEffect: "slide",
+  // thumbs          : false,
+  // hash            : false,
+  loop: true,
+  // keyboard        : true,
+  toolbar: false,
+  // animationEffect : false,
+  // arrows          : true,
+  clickContent: false
+});
 
-// // Slick
-// $(".main-slider").slick({
-//   slidesToShow: 1,
-//   infinite: true,
-//   dots: true,
-//   arrows: true
-// });
+// Slick
+$(".main-slider").slick({
+  slidesToShow: 1,
+  infinite: true,
+  dots: true,
+  arrows: true
+});
 
-// // ============================================
-// // Attach custom click event on cloned elements, 
-// // trigger click event on corresponding link
-// // ============================================
-// $(document).on('click', '.slick-cloned', function (e) {
-//   var $slides = $(this)
-//     .parent()
-//     .children('.slick-slide:not(.slick-cloned)');
+// ============================================
+// Attach custom click event on cloned elements, 
+// trigger click event on corresponding link
+// ============================================
+$(document).on('click', '.slick-cloned', function (e) {
+  var $slides = $(this)
+    .parent()
+    .children('.slick-slide:not(.slick-cloned)');
 
-//   $slides
-//     .eq(($(this).attr("data-slick-index") || 0) % $slides.length)
-//     .trigger("click.fb-start", { $trigger: $(this) });
+  $slides
+    .eq(($(this).attr("data-slick-index") || 0) % $slides.length)
+    .trigger("click.fb-start", { $trigger: $(this) });
 
-//   return false;
-// });
+  return false;
+});
