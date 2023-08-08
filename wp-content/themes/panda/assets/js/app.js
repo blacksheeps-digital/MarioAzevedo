@@ -1,5 +1,3 @@
-const { arrow } = require("@popperjs/core");
-
 document.addEventListener("DOMContentLoaded", function () {
   var backToTopButton = document.getElementById("back-to-top");
 
@@ -22,8 +20,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-$('.multiple-items').slick({
+// ============================
+// Init 1st slider and fancybox
+// ============================
+
+// fancybox
+$().fancybox({
+  selector: '.main-slider .slick-slide:not(.slick-cloned)',
+  backFocus: true
+});
+
+// Slick
+$(".main-slider").slick({
+  slidesToShow: 1,
   infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 3
+  dots: false,
+  arrows: false
+});
+
+// ============================================
+// Attach custom click event on cloned elements, 
+// trigger click event on corresponding link
+// ============================================
+$(document).on('click', '.slick-cloned', function (e) {
+  var $slides = $(this)
+    .parent()
+    .children('.slick-slide:not(.slick-cloned)');
+
+  $slides
+    .eq(($(this).attr("data-slick-index") || 0) % $slides.length)
+    .trigger("click.fb-start", { $trigger: $(this) });
+
+  return false;
 });

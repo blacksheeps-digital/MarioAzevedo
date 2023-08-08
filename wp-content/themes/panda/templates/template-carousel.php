@@ -8,23 +8,25 @@ get_header();
 
 <section class="carousel">
     <div class="container h-100">
-        <div class="row align-items-center justify-content-center h-100 slick-slider " id="lightgallery-carousel">
-
-            <a href="#" id="openModal" class="d-block col-md-8">
-                <img src="/assets/images/placeholder.png" id="myImage" class="img-fluid w-100" />
-            </a>
-
-
+        <div class="row align-items-center justify-content-center h-100  " id="lightgallery-carousel">
+            <div class="main-slider col-md-8 ">
+                <a href="https://via.placeholder.com/1200x800?text=1">
+                    <img src="https://via.placeholder.com/300x200?text=1" />
+                </a>
+                <a href="https://via.placeholder.com/1200x800?text=2">
+                    <img src="https://via.placeholder.com/300x200?text=2" />
+                </a>
+                <a href="https://via.placeholder.com/1200x800?text=3">
+                    <img src="https://via.placeholder.com/300x200?text=3" />
+                </a>
+                <a href="https://via.placeholder.com/1200x800?text=4">
+                    <img src="https://via.placeholder.com/300x200?text=4" />
+                </a>
+            </div>
 
         </div>
+    </div>
 </section>
-<div id="myModal" class="modal">
-    <span class="close">&#10006;</span> <!-- X symbol -->
-    <button id="zoomIn">&#128269;+</button> <!-- Magnifying glass with + -->
-    <button id="zoomOut">&#128269;-</button> <!-- Magnifying glass with - -->
-    <img class="modal-content" id="img01">
-</div>
-
 
 
 
