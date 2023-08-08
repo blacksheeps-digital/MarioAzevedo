@@ -18,6 +18,7 @@ get_header();
                 $args = array(
                     'post_type' => 'agregador',
                     'posts_per_page' => -1,
+                    'order' => 'ASC'
                 );
 
                 $query = new WP_Query($args);
