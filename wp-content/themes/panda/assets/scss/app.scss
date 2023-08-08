@@ -161,6 +161,7 @@ header {
     // border-radius: 50%;
     display: none;
     cursor: pointer;
+    text-align: right;
     z-index: 999;
 }
 
@@ -169,3 +170,91 @@ header {
 //     width: 30px;
 //     height: 30px;
 // }
+
+#sidebar {
+    h3 {
+        font-weight: bold;
+        color: #000;
+        text-decoration: none;
+        font-size: 23px;
+        padding: 1rem 0 0 0;
+        display: inline-block;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            a {
+                font-size: 22px;
+                line-height: 32px;
+                font-weight: 700;
+                letter-spacing: 0px;
+                color: #909090;
+                opacity: 1;
+                text-decoration: none;
+            }
+        }
+    }
+
+    ul.custom-category-list.list-inline {
+        margin-bottom: 2rem;
+    }
+
+    ul.custom-category-list.list-inline li a {
+        font-weight: bold;
+        color: #000;
+        text-decoration: none;
+        font-size: 24px;
+        padding: 1rem 0;
+        display: inline-block;
+        border-bottom: 1px solid #00000029;
+    }
+
+}
+
+/* Estilos para a div que envolve cada post */
+.agregador-post {
+    margin-bottom: 20px;
+
+    .taxonomies-list {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        gap: 10px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        opacity: 0;
+
+    transition: .3s ease all;
+    }
+
+    .taxonomies-list li {
+        margin-bottom: 5px;
+        margin: 5px 10px;
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+    }
+    :hover{
+        .taxonomies-list{
+            transition: .3s ease all;
+
+            opacity: 1;
+        }
+    }
+
+}
+.agregador-thumbnail{
+    height: 320px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}

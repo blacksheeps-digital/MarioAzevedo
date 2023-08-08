@@ -15837,5 +15837,79 @@ header .list-inline-item:hover span {
   padding: 10px;
   display: none;
   cursor: pointer;
+  text-align: right;
   z-index: 999;
+}
+
+#sidebar h3, #sidebar .h3 {
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  font-size: 23px;
+  padding: 1rem 0 0 0;
+  display: inline-block;
+}
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#sidebar ul li a {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  color: #909090;
+  opacity: 1;
+  text-decoration: none;
+}
+#sidebar ul.custom-category-list.list-inline {
+  margin-bottom: 2rem;
+}
+#sidebar ul.custom-category-list.list-inline li a {
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 1rem 0;
+  display: inline-block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1607843137);
+}
+
+/* Estilos para a div que envolve cada post */
+.agregador-post {
+  margin-bottom: 20px;
+}
+.agregador-post .taxonomies-list {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  transition: 0.3s ease all;
+}
+.agregador-post .taxonomies-list li {
+  margin-bottom: 5px;
+  margin: 5px 10px;
+}
+.agregador-post .taxonomies-list li a {
+  color: #000;
+  text-decoration: none;
+}
+.agregador-post :hover .taxonomies-list {
+  transition: 0.3s ease all;
+  opacity: 1;
+}
+
+.agregador-thumbnail {
+  height: 320px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
