@@ -9,7 +9,7 @@
         padding: 20px;
         flex-direction: column;
 
-        li{
+        li {
             width: max-content;
         }
     }
@@ -60,6 +60,52 @@ section:not(.agregador) .searchandfilter {
             @include media-breakpoint-down(lg) {
                 left: 10%;
             }
+        }
+    }
+}
+
+.curriculo {
+    .col-md-12.text-center {
+        & p:first-child {
+            position: relative;
+            &::before {
+                content: "Marta Carneiro - 1980";
+                position: absolute;
+                @include media-breakpoint-up(xxl) {
+                    top: 90%;
+                    right: -60px;
+                    transform: rotate(-90deg);
+                }
+                @include rhythm(18, 22);
+                color: #707070;
+            }
+            @include media-breakpoint-down(xxl) {
+                img {
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+
+    .download {
+        position: relative;
+        @media screen and (min-width: 1310px) {
+            &::before {
+                content: "ALINHAR JUSTIFICAR";
+                @include rhythm(49, 53);
+                position: absolute;
+                top: -300px;
+                transform: rotate(-90deg);
+                left: -270px;
+            }
+        }
+    }
+}
+
+.page-template-page-curriculo {
+    @media (min-width: 1400px) {
+        .container {
+            max-width: 1120px;
         }
     }
 }
