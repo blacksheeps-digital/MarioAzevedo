@@ -15829,3 +15829,13 @@ header .list-inline-item:hover span {
   opacity: 1;
   text-decoration: none;
 }
+
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  display: none;
+  cursor: pointer;
+  z-index: 999;
+}

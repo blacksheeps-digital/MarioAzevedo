@@ -56,7 +56,7 @@
                 </div>
                 <div class="col-md-3">
                     <?php custom_display_categories(); ?>
-
+                    <h3>Arquivos</h3>
                     <ul>
                         <?php
                         $args = array(

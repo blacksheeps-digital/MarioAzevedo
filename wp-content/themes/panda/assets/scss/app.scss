@@ -49,7 +49,7 @@ header {
 
     .list-inline-item {
         display: inline-block;
-            padding: 1rem 0.5rem;
+        padding: 1rem 0.5rem;
         text-align: center;
         margin-right: -5px !important;
         margin: 0 auto;
@@ -58,7 +58,8 @@ header {
         text-align: center;
         height: 80px;
         margin-bottom: -2px;
-        span{
+
+        span {
             display: flex;
             visibility: hidden;
             color: #fff;
@@ -68,23 +69,28 @@ header {
             margin: 0 auto;
 
         }
-        svg{
-            top: auto; 
+
+        svg {
+            top: auto;
             transition: top .5s;
         }
-        &:hover{
+
+        &:hover {
             background: #000;
-            svg{
-                fill:  #fff;
+
+            svg {
+                fill: #fff;
                 top: -10px;
                 position: relative;
                 transition: top .5s;
 
             }
-            path{
+
+            path {
                 stroke: #fff;
             }
-            span{
+
+            span {
                 color: #fff;
                 text-align: center;
                 margin: 0 auto;
@@ -96,27 +102,30 @@ header {
             }
         }
     }
- 
+
 }
-.modal{
-    .modal-xl{
+
+.modal {
+    .modal-xl {
         max-width: 100%;
     }
-    .modal-content{
+
+    .modal-content {
         min-height: 100vh;
     }
 }
-.home{
-    header{
-        .col-md-3.text-end svg{
+
+.home {
+    header {
+        .col-md-3.text-end svg {
             display: none;
         }
     }
 }
 
-.menu{
-    p{
-        font-size:24px;
+.menu {
+    p {
+        font-size: 24px;
         line-height: 32px;
         font-weight: 700;
         letter-spacing: 0px;
@@ -124,10 +133,11 @@ header {
         opacity: 1;
         margin-top: 10px;
     }
-    ul{
-        li{
-            a{
-                font-size:60px;
+
+    ul {
+        li {
+            a {
+                font-size: 60px;
                 line-height: 100px;
                 font-weight: 400;
                 font-family: 'Officina Serif ITC TT Book';
@@ -141,3 +151,21 @@ header {
         }
     }
 }
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    // background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    // border-radius: 50%;
+    display: none;
+    cursor: pointer;
+    z-index: 999;
+}
+
+// #back-to-top svg {
+//     fill: #fff;
+//     width: 30px;
+//     height: 30px;
+// }
