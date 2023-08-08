@@ -25,17 +25,29 @@ document.addEventListener("DOMContentLoaded", function () {
 // ============================
 
 // fancybox
-$().fancybox({
-  selector: '.main-slider .slick-slide:not(.slick-cloned)',
-  backFocus: true
+$('[data-fancybox]').fancybox({
+  // Options will go here
+  buttons: [
+    'close'
+  ],
+  wheel: false,
+  transitionEffect: "slide",
+  // thumbs          : false,
+  // hash            : false,
+  loop: true,
+  // keyboard        : true,
+  toolbar: false,
+  // animationEffect : false,
+  // arrows          : true,
+  clickContent: false
 });
 
 // Slick
 $(".main-slider").slick({
   slidesToShow: 1,
   infinite: true,
-  dots: false,
-  arrows: false
+  dots: true,
+  arrows: true
 });
 
 // ============================================
