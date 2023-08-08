@@ -14,14 +14,14 @@ get_header();
                 <h1>Acervo</h1>
             </div>
             <div class="col-md-1">
-                <a href="<?php echo esc_url(home_url('/')); ?>" class="back"><   Voltar </a>
+                <a href="<?php echo esc_url(home_url('/')); ?>" class="back">
+                    < Voltar </a>
             </div>
             <div class="col-md-12 text-center">
-            <?php echo do_shortcode('[searchandfilter id="18"]'); ?>
+                <?php echo do_shortcode('[searchandfilter id="18"]'); ?>
             </div>
             <div class="col-md-12 text-center row">
                 <?php
-
                 $args = array(
                     'post_type' => 'agregador',
                     'posts_per_page' => -1,
@@ -42,12 +42,16 @@ get_header();
                                     <div class="taxonomies">
                                         <?php
                                         $anos = get_the_terms($post->ID, 'anos');
+                                        $decadas = get_the_terms($post->ID, 'decadas');
                                         if ($anos) {
                                         ?>
                                             <ul class="taxonomies-list">
                                                 <?php
                                                 foreach ($anos as $ano) {
-                                                    echo '<li><a href="' . esc_url(home_url('/acervo/') . '?_sft_anos=' . esc_attr($ano->name)) . '">' . esc_html($ano->name) . '</a></li>';
+                                                    foreach ($decadas as $decada) {
+                                                        $url = esc_url(home_url('/acervo-resultados/') . '?_sft_decadas=' . esc_attr($decada->name) . '&_sft_anos=' . esc_attr($ano->name));
+                                                        echo '<li><a href="' . $url . '">' . esc_html($ano->name) . '</a></li>';
+                                                    }
                                                 }
                                                 ?>
                                             </ul>
@@ -59,14 +63,13 @@ get_header();
                             <?php endif; ?>
                             <h2 class="agregador-title"><?php the_title(); ?></h2>
                         </div>
-
                 <?php
                     endwhile;
                 endif;
 
                 wp_reset_postdata();
+                ?>
 
-                 ?>
 
             </div>
         </div>
