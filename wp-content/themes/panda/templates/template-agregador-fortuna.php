@@ -9,8 +9,11 @@ get_header();
 <section class="agregador">
     <div class="container h-100">
         <div class="row align-items-center justify-content-center h-100 ">
-            <div class="col-md-12 text-center">
+            <div class="col-md-11 text-center">
                 <h1>Fortuna crítica</h1>
+            </div>
+            <div class="col-md-1">
+                <a href="<?php echo esc_url(home_url('/')); ?>" class="back"><   Voltar </a>
             </div>
             <div class="col-md-12 text-center row">
                 <?php

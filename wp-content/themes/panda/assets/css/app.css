@@ -15779,6 +15779,9 @@ header .list-inline-item svg {
 header .list-inline-item:hover {
   background: #000;
 }
+header .list-inline-item:hover a {
+  text-decoration: none;
+}
 header .list-inline-item:hover svg {
   fill: #fff;
   top: -10px;
@@ -15912,4 +15915,129 @@ header .list-inline-item:hover span {
   align-items: center;
   display: flex;
   justify-content: center;
+}
+
+h1, .h1 {
+  font-family: "OfficinaSerifCTT";
+  font-size: 50px;
+  line-height: 67px;
+  margin-bottom: 1.5rem;
+}
+
+.curriculo p {
+  font-family: "Officina Serif ITC TT Book";
+  font-size: 18px;
+  line-height: 28px;
+  text-align: justify;
+}
+
+.curriculo .download.list-group {
+  border: none;
+}
+.curriculo .download.list-group a {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1607843137);
+  border-top: 1px solid rgba(0, 0, 0, 0.1607843137);
+  border-radius: 0;
+  padding: 15px 0;
+}
+.curriculo .download.list-group:hover {
+  background: #fff;
+}
+.curriculo .download.list-group:hover a {
+  background: #fff;
+}
+.curriculo .download.list-group + a {
+  border-top: none;
+}
+.curriculo .download p {
+  font-weight: 700;
+}
+
+.back, .back:hover {
+  color: #000000;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.sf-field-taxonomy-anos ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.sf-field-taxonomy-anos ul li {
+  margin-right: 10px;
+}
+.sf-field-taxonomy-anos ul li .sf-input-radio {
+  display: none;
+}
+.sf-field-taxonomy-anos ul li .sf-label-radio {
+  cursor: pointer;
+}
+.sf-field-taxonomy-anos ul li .sf-label-radio::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  vertical-align: middle;
+  background-color: transparent;
+}
+.sf-field-taxonomy-anos ul li .sf-input-radio:checked + .sf-label-radio {
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 20px;
+}
+.sf-field-taxonomy-anos ul li .sf-input-radio:checked + .sf-label-radio::before {
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.sf-field-taxonomy-segmento {
+  display: inline-block;
+}
+.sf-field-taxonomy-segmento ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+.sf-field-taxonomy-segmento ul li {
+  position: relative;
+  margin-right: 0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+  padding: 0 !important;
+  cursor: pointer;
+}
+.sf-field-taxonomy-segmento ul li .sf-input-radio {
+  display: none;
+}
+.sf-field-taxonomy-segmento ul li .sf-label-radio {
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+}
+.sf-field-taxonomy-segmento ul li .sf-input-radio:checked + .sf-label-radio {
+  background-color: #000;
+  color: #fff;
+}
+.sf-field-taxonomy-segmento ul li .sf-input-radio:checked + .sf-label-radio::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%) scale(1.2);
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid #000;
 }

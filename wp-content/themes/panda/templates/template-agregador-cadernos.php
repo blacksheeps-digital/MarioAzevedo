@@ -12,6 +12,9 @@ get_header();
             <div class="col-md-12 text-center">
                 <h1>CADERNOS E LIVROS-DE-ARTISTAS</h1>
             </div>
+            <div class="col-md-12">
+                <?php echo do_shortcode('[searchandfilter id="18"]'); ?>
+            </div>
             <div class="col-md-12 text-center row">
                 <?php
 

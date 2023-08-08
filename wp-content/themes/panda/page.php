@@ -1,43 +1,38 @@
 <?php
-/*
-Template Name: Arquivos por Ano
-*/
+/**
+ * The template for displaying all pages
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package panda
+ */
 
 get_header();
 ?>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-3">
-      <ul>
-        <?php
-          $args = array(
-            'type' => 'yearly', // Agrupar por ano
-            'show_post_count' => true, // Mostrar a contagem de posts
-          );
+	<main id="primary" class="site-main">
 
-          wp_get_archives($args);
-        ?>
-      </ul>
-    </div>
-    <div class="col-md-9">
-      <?php
-        while (have_posts()) {
-          the_post();
-          ?>
-          <div class="mb-4">
-            <a href="<?php the_permalink(); ?>">
-              <?php the_post_thumbnail('medium', array('class' => 'img-fluid')); ?>
-              <h2><?php the_title(); ?></h2>
-            </a>
-          </div>
-          <?php
-        }
-      ?>
-    </div>
-  </div>
-</div>
+		<?php
+		while ( have_posts() ) :
+			the_post();
+
+			get_template_part( 'template-parts/content', 'page' );
+
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+			endif;
+
+		endwhile; // End of the loop.
+		?>
+
+	</main><!-- #main -->
 
 <?php
+get_sidebar();
 get_footer();
-?>

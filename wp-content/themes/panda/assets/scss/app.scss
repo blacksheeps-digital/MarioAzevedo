@@ -77,7 +77,9 @@ header {
 
         &:hover {
             background: #000;
-
+            a{
+                text-decoration: none;
+            }
             svg {
                 fill: #fff;
                 top: -10px;
@@ -258,3 +260,162 @@ header {
     display: flex;
     justify-content: center;
 }
+h1{
+    font-family: 'OfficinaSerifCTT';
+font-size: 50px;
+line-height: 67px;
+margin-bottom: 1.5rem;
+
+}
+.curriculo p{
+    font-family: 'Officina Serif ITC TT Book';
+    font-size: 18px;
+    line-height: 28px;
+    text-align: justify;
+}
+.curriculo{
+    .download{
+        &.list-group{
+            border: none;
+            a{
+                border: none;
+                border-bottom: 1px solid #00000029;
+                border-top: 1px solid #00000029;
+
+                border-radius: 0;
+                padding: 15px 0;
+            }
+            &:hover{
+                background: #fff;
+                a{
+                    background: #fff;
+
+                }
+            }
+            & + a{
+                border-top: none;
+            }
+        }
+        p{
+            font-weight: 700;
+        }
+    }
+}
+.back, .back:hover{
+    color: #000000;
+    opacity: .5;
+    text-decoration: none;
+}
+.sf-field-taxonomy-anos {
+    ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    
+        li {
+            margin-right: 10px;
+            
+            .sf-input-radio {
+                display: none;
+            }
+    
+            .sf-label-radio {
+                cursor: pointer;
+    
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 5px;
+                    border: 1px solid transparent;
+                    border-radius: 50%;
+                    vertical-align: middle;
+                    background-color: transparent;
+                }
+            }
+            .sf-input-radio:checked + .sf-label-radio {
+                background-color: transparent;
+                font-weight: 700;
+                font-size: 20px;
+            }
+            .sf-input-radio:checked + .sf-label-radio::before {
+                background-color: transparent;
+                font-weight: 700;
+                font-size: 20px;
+            }
+        }
+    }
+    
+}
+.sf-field-taxonomy-segmento {
+    display: inline-block;
+
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+
+        li {
+            position: relative;
+            margin-right: 0;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            padding: 0;
+            background-color: transparent;
+            padding: 0 !important;
+            cursor: pointer;
+            .sf-input-radio {
+                display: none;
+            }
+
+            .sf-label-radio {
+                position: relative;
+                padding: 5px;
+                cursor: pointer;
+
+                &::before {
+                    // content: '';
+                    // position: absolute;
+                    // top: -8px;
+                    // left: 50%;
+                    // transform: translateX(-50%) rotate(180deg) scale(1.2);
+                    // width: 0;
+                    // height: 0;
+                    // border-left: 7px solid transparent;
+                    // border-right: 7px solid transparent;
+                    // border-bottom: 10px solid transparent;
+                    // border-top: 10px solid #fff;
+                }
+            }
+
+            .sf-input-radio:checked + .sf-label-radio {
+                background-color: #000;
+                color: #fff;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -20px;
+                    left: 50%;
+                    transform: translateX(-50%) scale(1.2);
+                    width: 0;
+                    height: 0;
+                    border-left: 7px solid transparent;
+                    border-right: 7px solid transparent;
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid #000;
+                }
+            }
+        }
+    }
+}
+
+
+ 
+
+
+
+
