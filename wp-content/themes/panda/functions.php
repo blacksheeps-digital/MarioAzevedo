@@ -152,28 +152,7 @@ function panda_scripts()
 
 
 
-
-
-
-
-
-
-	// wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js', array(), null, true);
-
-	// // Enqueue Slick from a CDN
-	// wp_enqueue_script('slick', 'https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js', array('jquery'), null, true);
-
-	// // Enqueue Slick styles from a CDN
-
-
-
-
-
-
-
-
-
-	wp_enqueue_style('panda-fancy', 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css', array(), null, true);
+	wp_enqueue_style('panda-fancy', 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css');
 
 
 	wp_enqueue_script('panda-jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js', array(), null, true);
