@@ -82,12 +82,12 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-6 text-center">
+                    <div class="col-6 text-center">
                         <a href="<?php echo esc_url(home_url('/')); ?>">
                             <img src='<?php echo get_template_directory_uri(); ?>/assets/images/logo.png' class='img-fluid' alt='' title='' loading='lazy'>
                         </a>
                     </div>
-                    <div class="col-md-3 text-end">
+                    <div class="col-3 text-end">
 
                         <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModalXl">
                             <svg xmlns="http://www.w3.org/2000/svg" width="45" height="22" viewBox="0 0 45 22">
