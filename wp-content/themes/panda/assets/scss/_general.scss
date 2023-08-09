@@ -1,4 +1,5 @@
 // General Style
+
 // // Search & Filter
 @include media-breakpoint-down(md) {
     .searchandfilter > ul {
@@ -64,6 +65,7 @@ section:not(.agregador) .searchandfilter {
     }
 }
 
+// // Curriculo postion absolute
 .curriculo {
     .col-md-12.text-center {
         & p:first-child {
@@ -110,6 +112,8 @@ section:not(.agregador) .searchandfilter {
     }
 }
 
+
+// // Fancybox e Carousel
 .f-thumbs__track {
     display: none !important;
 }
@@ -118,6 +122,9 @@ section:not(.agregador) .searchandfilter {
     margin: auto;
     display: block;
 }
+
+
+// Images
 
 .single-post{
     img{
