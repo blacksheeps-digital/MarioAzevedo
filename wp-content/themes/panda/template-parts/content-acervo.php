@@ -10,6 +10,39 @@
 
 ?>
 
+<?php   // Verificar se o post pertence à taxonomia "Cadernos e Livros de artistas"
+    if (has_term('Cadernos e Livros de artistas', 'segmento', $post)) {
+        ?>
+                    <?php the_content(); ?>
+ 
+        <?php
+    }
+    ?>
+    <?php   // Verificar se o post pertence à taxonomia "Cadernos e Livros de artistas"
+    if (has_term('Textos', 'segmento', $post)) {
+        ?>
+        <section class="">
+           <div class="container h-100">
+               <div class="row align-items-center justify-content-center h-100 ">
+                   <div class="col-md-12 text-center">
+                       <h1>
+
+                        <?php the_title(); ?> 
+
+                       </h1>
+                   </div>
+                   <div class="col-md-12">
+                       <?php the_content(); ?>
+
+                   </div>
+               </div>
+           </div>
+        </section>
+
+        <?php
+    }
+    else{
+    ?>
 <section class="carousel">
     <div class="container h-100">
         <div class="row align-items-center justify-content-center h-100 ">
@@ -41,3 +74,4 @@
         </div>
     </div>
 </section>
+<?php };?>
