@@ -15529,6 +15529,19 @@ section:not(.agregador) .searchandfilter > ul > li:first-child {
   }
 }
 
+.f-thumbs__track {
+  display: none !important;
+}
+
+.f-carousel__slide img {
+  margin: auto;
+  display: block;
+}
+
+.single-post img {
+  max-width: 100%;
+}
+
 .form-control,
 .form-select {
   gap: 10px;

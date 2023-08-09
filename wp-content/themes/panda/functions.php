@@ -149,20 +149,22 @@ function panda_scripts()
 	wp_enqueue_style('panda-style-site', get_template_directory_uri() . '/assets/css/app.css');
 	wp_enqueue_style('slick', 'https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css');
 	wp_enqueue_style('slick-theme', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css');
-
-
-
-	wp_enqueue_style('panda-fancy', 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css');
+	wp_enqueue_style('panda-fancy', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css');
+	wp_enqueue_style('panda-fancy-box', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css');
+	wp_enqueue_style('panda-fancy-box-thumb', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.thumbs.css');
 
 
 	wp_enqueue_script('panda-jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js', array(), null, true);
 	wp_enqueue_script('panda-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
 	wp_enqueue_script('panda-bs', get_template_directory_uri() . '/assets/js/vendor/bootstrap.min.js', array(), _S_VERSION, true);
 	wp_enqueue_script('panda-slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array(), null, true);
-	if (is_page_template('templates/template-carousel.php')) {
-		wp_enqueue_script('panda-fancy', 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', array(), null, true);
-		echo '<script>console.log("ok");</script>';
-	}
+
+
+	// if (is_page_template('templates/template-carousel.php')) {
+		wp_enqueue_script('panda-fancy', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js', array(), null, true);
+		wp_enqueue_script('panda-fancy-box', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js', array(), null, true);
+		wp_enqueue_script('panda-fancy-box-thub', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.thumbs.umd.js', array(), null, true);
+	// }
 
 
 	wp_enqueue_script('panda-app', get_template_directory_uri() . '/assets/js/app.js', array(), _S_VERSION, true);
