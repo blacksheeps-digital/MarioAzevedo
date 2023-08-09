@@ -1,6 +1,9 @@
 // General Style
 
 // // Search & Filter
+.searchandfilter > ul {
+    padding-left: 0;
+}
 @include media-breakpoint-down(md) {
     .searchandfilter > ul {
         flex-wrap: nowrap;
@@ -142,5 +145,14 @@ section:not(.agregador) .searchandfilter {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+}
+
+// // Agregador
+.back {
+    @include media-breakpoint-up(lg) {
+        margin-bottom: -40px;
+        display: block;
+        padding-top: 30px;
     }
 }

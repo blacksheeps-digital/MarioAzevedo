@@ -10,12 +10,12 @@ get_header();
     <div class="container h-100">
         <div class="row align-items-center justify-content-center h-100 ">
 
-            <div class="col-md-11 text-center">
-                <h1>Acervo</h1>
-            </div>
-            <div class="col-md-1">
+            <div class="col-md-12 text-end">
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="back">
                     < Voltar </a>
+            </div>
+            <div class="col-md-12 text-center">
+                <h1>Acervo</h1>
             </div>
             <div class="col-md-12 text-center">
                 <?php echo do_shortcode('[searchandfilter id="18"]'); ?>

@@ -52,9 +52,8 @@ header {
         align-items: center;
         justify-content: center;
         height: 60px;
-
-        .list-inline {
-            display: none;
+        .list-inline a {
+            @include rhythm(25, 30);
         }
     }
 
@@ -113,6 +112,31 @@ header {
         }
     }
 }
+.mob-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    li {
+        width: fit-content;
+        a {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid transparent;
+            transition: all ease-in-out 0.2s;
+            &:hover {
+                border-color: black;
+            }
+        }
+    }
+    span {
+        @include rhythm(20, 25);
+    }
+}
 
 .modal {
     .modal-xl {
@@ -141,6 +165,10 @@ header {
         color: #909090;
         opacity: 1;
         margin-top: 10px;
+        @include media-breakpoint-down(lg){
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
     }
 
     ul {
@@ -156,6 +184,14 @@ header {
                 text-transform: uppercase;
                 opacity: 1;
                 text-decoration: none;
+                @include media-breakpoint-down(lg) {
+                    @include rhythm(35, 40);
+                    padding-bottom: 1rem;
+                }
+            }
+            @include media-breakpoint-down(lg) {
+                @include rhythm(35, 40);
+                padding-bottom: 1rem;
             }
         }
     }
@@ -254,7 +290,7 @@ header {
         a {
             color: #000;
             text-decoration: none;
-            @include rhythm(30,35);
+            @include rhythm(30, 35);
             font-weight: bold;
         }
     }
@@ -339,12 +375,14 @@ h1 {
 
             .sf-label-radio {
                 cursor: pointer;
+                padding-left: 0;
+                padding-right: 10px;
 
                 &::before {
                     content: "";
                     display: inline-block;
-                    width: 16px;
-                    height: 16px;
+                    width: 0;
+                    height: 0;
                     margin-right: 5px;
                     border: 1px solid transparent;
                     border-radius: 50%;
