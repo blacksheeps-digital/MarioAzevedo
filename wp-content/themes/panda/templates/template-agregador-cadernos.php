@@ -37,13 +37,17 @@ get_header();
                                 <div class="agregador-thumbnail" style="background-image: url('<?php echo esc_url($thumbnail_url); ?>');">
                                     <div class="taxonomies">
                                         <?php
-                                        $anos = get_the_terms($post->ID, 'anos');
-                                        if ($anos) {
+                                        $autores = get_the_terms($post->ID, 'autores');
+                                        $decadas = get_the_terms($post->ID, 'decadas');
+                                        if ($autores) {
                                         ?>
                                             <ul class="taxonomies-list">
                                                 <?php
-                                                foreach ($anos as $ano) {
-                                                    echo '<li><a href="' . esc_url(home_url('/acervo/') . '?_sft_anos=' . esc_attr($ano->name)) . '">' . esc_html($ano->name) . '</a></li>';
+                                                foreach ($autores as $autor) {
+                                                    foreach ($decadas as $decada) {
+                                                        $url = esc_url(home_url('/acervo-resultados/') . '?_sft_segmento=cadernos-e-livros-de-artistas?_sft_decadas=' . esc_attr($decada->name) . '&_sft_autores=' . esc_attr($autor->slug));
+                                                        echo '<li><a href="' . $url . '">' . esc_html($autor->name) . '</a></li>';
+                                                    }
                                                 }
                                                 ?>
                                             </ul>
@@ -62,7 +66,7 @@ get_header();
 
                 wp_reset_postdata();
 
-                 ?>
+                ?>
 
             </div>
         </div>
