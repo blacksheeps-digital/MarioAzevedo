@@ -24,31 +24,34 @@ document.addEventListener("DOMContentLoaded", function () {
 // ============================
 
 // fancybox
-$().fancybox({
-  selector: '.main-slider .slick-slide:not(.slick-cloned)',
-  backFocus: true
-});
+const container = document.getElementById("myCarousel");
+const options = { Dots: false };
 
+new Carousel(container, options, { Thumbs });
+
+Fancybox.bind("[data-fancybox]", {
+  // Your custom options
+});
 // Slick
-$(".main-slider").slick({
-  slidesToShow: 3,
-  infinite: true,
-  dots: false,
-  arrows: false
-});
+// $('.main-slider').slick({
+//   slidesToShow: 1,
+//   infinite: true,
+//   dots: true,
+//   arrows: true,
+// });
 
 // ============================================
-// Attach custom click event on cloned elements, 
+// Attach custom click event on cloned elements,
 // trigger click event on corresponding link
-// ============================================
-$(document).on('click', '.slick-cloned', function (e) {
-  var $slides = $(this)
-    .parent()
-    .children('.slick-slide:not(.slick-cloned)');
+// // ============================================
+// $(document).on('click', '.slick-cloned', function (e) {
+//   var $slides = $(this)
+//     .parent()
+//     .children('.slick-slide:not(.slick-cloned)');
 
-  $slides
-    .eq(($(this).attr("data-slick-index") || 0) % $slides.length)
-    .trigger("click.fb-start", { $trigger: $(this) });
+//   $slides
+//     .eq(($(this).attr("data-slick-index") || 0) % $slides.length)
+//     .trigger("click.fb-start", { $trigger: $(this) });
 
-  return false;
-});
+//   return false;
+// });

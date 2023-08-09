@@ -109,3 +109,12 @@ section:not(.agregador) .searchandfilter {
         }
     }
 }
+
+.f-thumbs__track {
+    display: none !important;
+}
+
+.f-carousel__slide img {
+    margin: auto;
+    display: block;
+}
