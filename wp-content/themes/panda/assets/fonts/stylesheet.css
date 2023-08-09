@@ -76,3 +76,10 @@
   .curriculo .download::before{
     content: none !important;
   }
+  .single p + p {
+    margin-top: 20px;
+  }
+  .single p {
+    font-family: 'Officina Serif ITC TT Book' !important;
+
+  }
