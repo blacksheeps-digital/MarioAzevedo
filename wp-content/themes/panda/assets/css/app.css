@@ -15542,6 +15542,19 @@ section:not(.agregador) .searchandfilter > ul > li:first-child {
   max-width: 100%;
 }
 
+.entry-content span {
+  font-size: inherit;
+  color: #707070;
+}
+
+.recommended .img-wrapper {
+  height: 200px;
+  max-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .form-control,
 .form-select {
   gap: 10px;

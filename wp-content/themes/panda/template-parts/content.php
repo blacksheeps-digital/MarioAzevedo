@@ -83,7 +83,9 @@
                                         while ($q->have_posts()) : $q->the_post();
                                     ?>
                                             <a href="<?php the_permalink(); ?>" class="col-md-4 col-12 d-flex flex-column align-items-start justify-content-start h-100 pe-md-5">
-                                                <?php the_post_thumbnail('large', array('class' => 'img-fluid')); ?>
+                                                <div class="img-wrapper">
+                                                    <?php the_post_thumbnail('large', array('class' => 'img-fluid')); ?>
+                                                </div>
                                                 <h3 class="mt-4"><?php the_title(); ?></h3>
                                                 <p class="mt-4">
                                                     <?php the_excerpt(); ?>

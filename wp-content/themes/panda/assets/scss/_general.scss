@@ -112,7 +112,6 @@ section:not(.agregador) .searchandfilter {
     }
 }
 
-
 // // Fancybox e Carousel
 .f-thumbs__track {
     display: none !important;
@@ -123,11 +122,25 @@ section:not(.agregador) .searchandfilter {
     display: block;
 }
 
-
 // Images
 
-.single-post{
-    img{
+.single-post {
+    img {
         max-width: 100%;
+    }
+}
+
+.entry-content span {
+    font-size: inherit;
+    color: #707070;
+}
+
+.recommended {
+    .img-wrapper {
+        height: 200px;
+        max-height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
