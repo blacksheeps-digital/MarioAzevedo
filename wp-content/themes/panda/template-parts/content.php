@@ -15,8 +15,7 @@
         <div class="container h-100">
             <div class="row h-100">
                 <div class="col-md-9">
-
-                    <header class="entry-header">
+                    <header class="entry-header text-center" style="border-bottom: 1px solid transparent">
                         <?php
                         if (is_singular()) :
                             the_title('<h1 class="entry-title">', '</h1>');
@@ -26,7 +25,12 @@
 
                         ?>
                     </header>
-                    <?php panda_post_thumbnail(); ?>
+                </div>
+                <div class="col-md-9">
+
+
+                    <?php //panda_post_thumbnail(); 
+                    ?>
 
                     <div class="entry-content">
                         <?php
@@ -53,43 +57,48 @@
                         );
                         ?>
                     </div>
-                    <?php
-                    $id_post = $post->ID;
+                    <section class="recommended">
+                        <div class="container h-100">
+                            <div class="row align-items-center justify-content-start h-100">
+                                <div class="col-md-12 d-flex align-items-start justify-content-start h-100 p-0">
 
-                    // Obter categorias do post atual
-                    $categories = wp_get_post_categories($id_post);
 
-                    $q = new WP_Query(
-                        array(
-                            'post_type' => 'post',
-                            'showposts' => 2,
-                            'post__not_in' => array($id_post),
-                            'category__in' => $categories, // Mostrar posts da categoria do post atual
-                        )
-                    );
 
-                    if ($q->have_posts()) :
-                        while ($q->have_posts()) : $q->the_post();
-                    ?>
-                            <div class="related-post">
-                                <?php if (has_post_thumbnail()) : ?>
-                                    <div class="related-thumbnail">
-                                        <a href="<?php the_permalink(); ?>">
-                                            <?php the_post_thumbnail('medium'); ?>
-                                        </a>
-                                    </div>
-                                <?php endif; ?>
-                                <div class="related-content">
-                                    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                                    <p><?php the_excerpt(); ?></p>
+                                    <?php
+                                    $id_post = $post->ID;
+
+                                    // Obter categorias do post atual
+                                    $categories = wp_get_post_categories($id_post);
+
+                                    $q = new WP_Query(
+                                        array(
+                                            'post_type' => 'post',
+                                            'showposts' => 2,
+                                            'post__not_in' => array($id_post),
+                                            'category__in' => $categories, // Mostrar posts da categoria do post atual
+                                        )
+                                    );
+
+                                    if ($q->have_posts()) :
+                                        while ($q->have_posts()) : $q->the_post();
+                                    ?>
+                                            <a href="<?php the_permalink(); ?>" class="col-md-4 col-12 d-flex flex-column align-items-start justify-content-start h-100 pe-md-5">
+                                                <?php the_post_thumbnail('large', array('class' => 'img-fluid')); ?>
+                                                <h3 class="mt-4"><?php the_title(); ?></h3>
+                                                <p class="mt-4">
+                                                    <?php the_excerpt(); ?>
+                                                </p>
+                                            </a>
+
+                                    <?php
+                                        endwhile;
+                                    endif;
+                                    wp_reset_postdata();
+                                    ?>
                                 </div>
                             </div>
-                    <?php
-                        endwhile;
-                    endif;
-                    wp_reset_postdata();
-                    ?>
-
+                        </div>
+                    </section>
                 </div>
                 <div class="col-md-3" id="sidebar">
                     <?php custom_display_categories(); ?>

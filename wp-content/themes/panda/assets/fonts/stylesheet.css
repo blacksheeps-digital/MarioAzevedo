@@ -60,3 +60,19 @@
     font-style: normal;
     font-display: swap;
 }
+
+.sf-field-taxonomy-segmento ul li .sf-label-radio {
+   
+    font-family: 'Officina Serif ITC TT Book' !important;
+}
+.recommended a {
+    color: inherit;
+    text-decoration: inherit;
+    transition: all ease-in-out 0.4s;
+  }
+  .recommended a:hover {
+    transform: scale(1.05);
+  }
+  .curriculo .download::before{
+    content: none !important;
+  }
