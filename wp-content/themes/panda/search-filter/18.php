@@ -98,6 +98,6 @@ if ( $query->have_posts() )
 }
 else
 {
-	echo "No Results Found";
+	echo "Sem resultados encontrados";
 }
 ?>

@@ -9,25 +9,34 @@ get_header();
     <div class="container">
         <div class="row">
             <div class="col-md-9">
-                <div class="row">
+                <section class="recommended">
+                    <div class="container h-100">
+                        <div class="row align-items-center justify-content-start h-100">
+                            <div class="col-md-12 d-flex align-items-start justify-content-start h-100 p-0">
+                                <?php
+                                while (have_posts()) {
+                                    the_post();
+                                ?>
+                                    <a href="<?php the_permalink(); ?>" class="col-md-4 col-12 mb-3 d-flex flex-column align-items-start justify-content-start h-100 pe-md-5">
+                                        <?php the_post_thumbnail('large', array('class' => 'img-fluid')); ?>
+                                        <h3 class="mt-4"><?php the_title(); ?></h3>
+                                        <p class="mt-4">
+                                            <?php the_excerpt(); ?>
+                                        </p>
+                                    </a>
+                                <?php
+                                }
+                                ?>
+                            </div>
 
-                    <?php
-                    while (have_posts()) {
-                        the_post();
-                    ?>
-                        <div class="mb-4">
-                            <a href="<?php the_permalink(); ?>">
-                                <?php the_post_thumbnail('medium', array('class' => 'img-fluid')); ?>
-                                <h2><?php the_title(); ?></h2>
-                            </a>
                         </div>
-                    <?php
-                    }
-                    ?>
-                </div>
-
+                    </div>
+                </section>
             </div>
-            <div class="col-md-3">
+
+            <div class="col-md-3" id="sidebar">
+                <?php custom_display_categories(); ?>
+                <h3>Arquivos</h3>
                 <ul>
                     <?php
                     $args = array(
@@ -38,6 +47,7 @@ get_header();
                     wp_get_archives($args);
                     ?>
                 </ul>
+
             </div>
         </div>
     </div>

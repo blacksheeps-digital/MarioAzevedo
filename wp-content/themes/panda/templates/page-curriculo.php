@@ -31,7 +31,7 @@ get_header();
             <div class="list-group download mt-4">
                 <?php if ($curriculo_resumido) : ?>
 
-                    <a href="<?php echo esc_url( $curriculo_resumido['url'] ); ?>" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" download="">
+                    <a href="<?php echo esc_url( $curriculo_resumido['url'] ); ?>" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" download="Currículo resumido">
                         <p class="m-0">
                             Currículo resumido
                         </p>
@@ -51,7 +51,7 @@ get_header();
 
                 <?php if ($curriculo_completo) : ?>
 
-                    <a href="<?php echo esc_url( $curriculo_completo['url'] ); ?>" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" download="">
+                    <a href="<?php echo esc_url( $curriculo_completo['url'] ); ?>" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" download=" Currículo completo">
                         <p class="m-0">
                             Currículo completo
                         </p>
@@ -71,7 +71,7 @@ get_header();
 
                 <?php if ($curriculo_comentado) : ?>
 
-                    <a href="<?php echo esc_url( $curriculo_comentado['url'] ); ?>" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" download="">
+                    <a href="<?php echo esc_url( $curriculo_comentado['url'] ); ?>" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" download="Currículo comentado">
                         <p class="m-0">
                             Currículo comentado
                         </p>
