@@ -15538,6 +15538,10 @@ section:not(.agregador) .searchandfilter > ul > li:first-child {
   display: block;
 }
 
+.single-post img {
+  max-width: 100%;
+}
+
 .form-control,
 .form-select {
   gap: 10px;

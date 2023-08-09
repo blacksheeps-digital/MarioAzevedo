@@ -17,41 +17,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+if (document.getElementById("myCarousel")) {
 
+  // fancybox
+  const container = document.getElementById("myCarousel");
+  const options = { Dots: false };
 
-// ============================
-// Init 1st slider and fancybox
-// ============================
+  new Carousel(container, options, { Thumbs });
 
-// fancybox
-const container = document.getElementById("myCarousel");
-const options = { Dots: false };
-
-new Carousel(container, options, { Thumbs });
-
-Fancybox.bind("[data-fancybox]", {
-  // Your custom options
-});
-// Slick
-// $('.main-slider').slick({
-//   slidesToShow: 1,
-//   infinite: true,
-//   dots: true,
-//   arrows: true,
-// });
-
-// ============================================
-// Attach custom click event on cloned elements,
-// trigger click event on corresponding link
-// // ============================================
-// $(document).on('click', '.slick-cloned', function (e) {
-//   var $slides = $(this)
-//     .parent()
-//     .children('.slick-slide:not(.slick-cloned)');
-
-//   $slides
-//     .eq(($(this).attr("data-slick-index") || 0) % $slides.length)
-//     .trigger("click.fb-start", { $trigger: $(this) });
-
-//   return false;
-// });
+  Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+  });
+}
