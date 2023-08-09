@@ -19,35 +19,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
 // ============================
 // Init 1st slider and fancybox
 // ============================
 
 // fancybox
-$('[data-fancybox]').fancybox({
-  // Options will go here
-  buttons: [
-    'close'
-  ],
-  wheel: false,
-  transitionEffect: "slide",
-  // thumbs          : false,
-  // hash            : false,
-  loop: true,
-  // keyboard        : true,
-  toolbar: false,
-  // animationEffect : false,
-  // arrows          : true,
-  clickContent: false
+$().fancybox({
+  selector: '.main-slider .slick-slide:not(.slick-cloned)',
+  backFocus: true
 });
 
 // Slick
 $(".main-slider").slick({
-  slidesToShow: 1,
+  slidesToShow: 3,
   infinite: true,
-  dots: true,
-  arrows: true
+  dots: false,
+  arrows: false
 });
 
 // ============================================
